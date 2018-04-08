@@ -1,0 +1,16 @@
+http://www.scala-lang.org/download/
+
+wget -c https://github.com/scala/scala/archive/v2.12.5.tar.gz
+
+sudo mkdir -p /usr/lib/scala
+
+sudo tar -xzf v2.12.5.tar.gz -C /usr/lib/scala
+
+ls /usr/lib/scala/scala-2.12.5/
+
+sudo vi ~/.bashrc
+export SCALA_HOME=/usr/lib/scala/scala-2.12.5
+export PATH=${SCALA_HOME}/bin:$PATH
+source ~/.bashrc
+
+scala -version
